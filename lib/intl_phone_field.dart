@@ -417,7 +417,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                   value.length <= _selectedCountry.maxLength
               ? null
               : widget.invalidNumberMessage;
-        }else if(widget.disableLengthCheck && value == null){
+        }else if(widget.disableLengthCheck && value.number.isNotEmpty){
           print('yes here');
           return "Phone number must not be empty";
         }
