@@ -238,7 +238,7 @@ class IntlPhoneField extends StatefulWidget {
   final EdgeInsets flagsButtonMargin;
   
   // customer maxlength
-  final int maxlength;
+  final int? maxlength;
 
   IntlPhoneField({
     Key? key,
