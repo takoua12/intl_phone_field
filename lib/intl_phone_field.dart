@@ -415,14 +415,12 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
         widget.onChanged?.call(phoneNumber);
       },
       validator: (value) {
-        print('validator ${widget.disableLengthCheck}');
         if (!widget.disableLengthCheck && value != null) {
           return value.length >= _selectedCountry.minLength &&
                   value.length <= _selectedCountry.maxLength
               ? null
               : widget.invalidNumberMessage;
         }else if(widget.disableLengthCheck && (value == null || value.isEmpty)){
-          print('yes here');
           return "Phone number must not be empty";
         }
 
