@@ -421,7 +421,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
               ? null
               : widget.invalidNumberMessage;
         }else if(widget.disableLengthCheck && (value == null || value.isEmpty)){
-          return "Phone number must not be empty";
+          return "Le numéro de téléphone ne doit pas être vide";
         }
 
         return validatorMessage;
