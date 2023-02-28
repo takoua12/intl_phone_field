@@ -373,6 +373,12 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      toolbarOptions: ToolbarOptions(
+                                  copy: false,
+                                  cut: true,
+                                  paste: false,
+                                  selectAll: true,
+                                ),
       initialValue: (widget.controller == null) ? number : null,
       readOnly: widget.readOnly,
       obscureText: widget.obscureText,
