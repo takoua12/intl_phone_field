@@ -1,7 +1,7 @@
 library intl_phone_field;
 
 import 'dart:async';
-
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl_phone_field/country_picker_dialog.dart';
@@ -298,6 +298,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
   late String number;
 
   String? validatorMessage;
+  String local = Get.locale.toString();
 
   @override
   void initState() {
@@ -427,7 +428,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
               ? null
               : widget.invalidNumberMessage;
         }else if(widget.disableLengthCheck && (value == null || value.isEmpty)){
-          return "Le numéro de téléphone ne doit pas être vide";
+          return local=='fr'?"Le numéro de téléphone ne peut pas être vide":local=='en'?"The phone number cannot be empty":"لا يمكن أن يكون رقم الهاتف فارغا";
         }
 
         return validatorMessage;
