@@ -1,5 +1,6 @@
 // see: https://en.wikipedia.org/wiki/List_of_country_calling_codes
 // for list of country/calling codes
+import 'package:get/get.dart';
 
 String local = Get.locale.toString();
 List<Country> countries = [
