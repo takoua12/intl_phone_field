@@ -2,7 +2,7 @@
 // for list of country/calling codes
 
 String local = Get.locale.toString();
-const List<Country> countries = [
+List<Country> countries = [
   Country(
     name: "Afghanistan",
     flag: "🇦🇫",
